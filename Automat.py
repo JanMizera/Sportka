@@ -14,8 +14,7 @@ def porovnavani(vyherni_cisla : list, vybrana_cisla : list) -> int:
         for y in vybrana_cisla:
             if x == y:
                 shoda = shoda + 1
-                vyherni_cisla.remove(x)
-                vybrana_cisla.remove(y)
+                pass
     return shoda
 
 def vyhra(pocet_shod : int) -> int:
@@ -61,7 +60,7 @@ while opakuj == 1 and penize > 40:
 
     if kombinace == 1:
         while len(seznam_cisel) < 7:
-            cislo = int(input("zadejte číslo od 1 do 50."))
+            cislo = int(input("zadejte číslo od 1 do 49."))
             if 0 < cislo < 50 and seznam_cisel.count(cislo) < 1:      
                 seznam_cisel.append(cislo)
                 print("Vaše čísla:",seznam_cisel)
@@ -145,6 +144,6 @@ while opakuj == 1 and penize > 40:
     
     celkova_vyhra = celkova_vyhra + vyhra_1 + vyhra_2 + vyhra_sance
     
-    opakuj = int(input("Pro opakování stiskněte 1, pro ukončení cokoliv jiného."))
+    opakuj = int(input("Pro opakování stiskněte 1, pro ukončení jakékoliv jiné číslo."))
 
 print("Vaše celková výhra je:", celkova_vyhra,"Kč")
